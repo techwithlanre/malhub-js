@@ -1,3 +1,5 @@
+<div id="result"></div>
+
 <script>
 var role1 = 'role_account';
 var role2 = '';
@@ -7,5 +9,21 @@ var role3 = 'role_supervisor';
 var start = 5;
 var end = role3.length;
 
-console.log(role3.slice(start, end));
+//console.log(role3.slice(start, end));
+
+
+//substring
+let str = "Apples, Banana, Kiwi";
+let part = str.substring(0, 5);
+
+//console.log(part);
+
+
+
+let str2 = "Apple, Banana, Kiwi";
+let part2 = str.substr(7, 2);
+document.getElementById('result').innerHTML = part2;
+
+
+
 </script>

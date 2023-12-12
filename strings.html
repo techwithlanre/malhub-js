@@ -22,8 +22,39 @@ let part = str.substring(0, 5);
 
 let str2 = "Apple, Banana, Kiwi";
 let part2 = str.substr(7, 2);
-document.getElementById('result').innerHTML = part2;
+//document.getElementById('result').innerHTML = part2;
+
+let text = "Please come to Microsoft";
+let newText = text.replaceAll('Microsoft', 'MALhub');
 
 
+let name  = "Ayomide";
 
+
+let text1 = "Hello";
+let text2 = "World";
+let text3 = text1.concat(" Const&nbsp;", text2);
+
+
+//Regular Expression
+
+
+let text4 = " Ayo ";
+//document.getElementById('result').innerHTML = text4.trimEnd().length;
+
+
+let text5 = '25';
+let maxLength = 4;
+let text5Length = text5.length;
+
+if(maxLength == 4) {
+    text6 = text5 + "XX";
+} else {
+    text6 = text5 + "X";
+}
+
+let paddedStart = text5.padStart(4, "X");
+let paddedEnd = text5.padEnd(4, "X");
+
+document.write(text6);
 </script>

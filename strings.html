@@ -1,4 +1,14 @@
-<div id="result"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
 
 <script>
 var role1 = 'role_account';
@@ -56,5 +66,30 @@ if(maxLength == 4) {
 let paddedStart = text5.padStart(4, "X");
 let paddedEnd = text5.padEnd(4, "X");
 
-document.write(text6);
+//document.write(text6);
+
+const question = "What's your perfect first date?";
+
+//method chaining
+document.write(
+    question.split('')
+    .map(parseInt).filter(a => a).reduce((a, b) => a + b).toString()
+    .split("")
+    .reverse()
+    .join("")
+);
+
+
+const string_ = "b" + "a" + + "n" + "a";
+//const string_ = + "4" + + "a";
+//document.write(string_);
+
+
+const a  = ["a", "b", "c", "d", "e"];
+const end_ = a.length - 2; // stop at length of a - 2 (index)
+const sliced = a.slice(1, end_).join("");
+//document.write(sliced)
+
+
+//document.write(sliced.join(''));
 </script>

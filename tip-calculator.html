@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="flex flex-row justify-center mt-20">
+    <div class="p-10 bg-gray-100 w-[550px] rounded-xl">
+        <h3 class="font-bold text-3xl">Tip Calculator</h3>
+        <div class="mt-10">
+            <div>
+                <div>
+                    <label for="">Amount</label>
+                </div>
+                <input type="number" id="billAmount" class="mt-2 p-2 rounded-lg w-full">
+            </div>
+
+            <div class="mt-3">
+                <div>
+                    <label for="">Tip Percentage</label>
+                </div>
+                <input type="number" id="tipPercentage" class="mt-2 p-2 rounded-lg w-full" min="0" max="100">
+            </div>
+            <div class="mt-3">
+                <div>Tip Amount: <span class="font-bold" id="tipAmount"></span></div>
+            </div>
+            <div class="mt-3">
+                <div>Total Bill: <span class="font-bold" id="totalBill"></span></div>
+            </div>
+
+        </div>
+    </div>
+  </div>
+  <script>
+    const billAmountInput = document.getElementById('billAmount');
+    const tipPercentageInput = document.getElementById('tipPercentage');
+    const tipAmountDiv = document.getElementById('tipAmount');
+    const totalBillDiv = document.getElementById('totalBill');
+
+    billAmountInput.addEventListener('keyup', function(e) {
+        calculateTip()
+    });
+
+    tipPercentageInput.addEventListener('keyup', function(e) {
+        calculateTip()
+    });
+
+    function calculateTip() {
+        tipAmountDiv.innerHTML = parseFloat(billAmountInput.value) * (parseFloat(tipPercentageInput.value) / 100);
+        totalBillDiv.innerHTML = + tipAmountDiv.textContent + + billAmountInput.value;
+    }
+
+
+  </script>
+</body>
+</html>
